@@ -79,7 +79,7 @@ new p5(function (app) {
 
                 app.fill(14, 231, 136);
                 app.textSize(app.width * 0.06);
-                app.text("Has click para continuar.", app.width / 2, app.height * 0.8);
+                app.text("Has click aquí para continuar.", app.width / 2, app.height * 0.8);
 
 
 
