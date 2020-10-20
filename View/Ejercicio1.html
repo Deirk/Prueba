@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../Styles/ejercicio1.css">
+    <script src="../Scripts/ejercicio1.js"></script>
+
+    <title>Techhase | Descomposición</title>
+</head>
+
+<body>
+
+    <script src="../Libs/p5.js"></script>
+    <header class="ppal">
+        <section class="menu">
+            <a href="Ejercicios.html" class="menu">
+                <img src="../Imagenes/Logo horizontal.png" alt="Techhase" class="menu__logo">
+            </a>
+        </section>
+    </header>
+
+    <div class="ejercicios">
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <h2 class="modal-content__subtitle">Instrucciones</h2>
+                <p class="modal-content__paragraph">En primera instancia, tenemos una secuencia inicial de dos
+                    cuadrados.
+                    <br><br>
+                    Por medio de los botones numerados del 1 al 5, modificaras las figuras iniciales (dos cuadrados),
+                    pulsálos hasta obtener 3 círculos. Cabe resaltar que con el último botón se reiniciará la secuencia.
+                    <br><br>
+                    <strong>Ejemplo:</strong>
+                    <br>
+                    Si se presiona el botón 1, el primer triángulo, en cualquier secuencia dada, se reemplaza
+                    con dos círculos.
+                    <br>
+                    Cuando se presiona el botón 5, la primera instancia de tres círculos se reemplaza
+                    con nada (es decir, se eliminan).
+                </p>
+                <a class="form__link"><button class="modal-content__btn" id="myBtn">Continuar</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="fil">
+            <! --PRIMER EJERCICIO-->
+                <div class="ejer">
+                    <section class="ejer__text">
+                        <h1 class="ejer__title">Figuras</h2>
+                            <h2 class="ejer__subtitle">¡Vamos a jugar!</h2>
+                            <p class="ejer__paragraph">Realiza el ejercicio según las instrucciones dadas.</p>
+                    </section>
+                    <section class="ejer__ejer">
+                        <img src="../Imagenes/Ejercicio 1.png" alt="Ejercicio de figuras" class="ejer__img">
+                    </section>
+                </div>
+        </div>
+
+        <div class="fil">
+            <! --CUADRO DE TIEMPO-->
+                <div class="time">
+                    <section class="time__text">
+                        <h1 class="time__title">¡Contra el reloj!</h2>
+                            <p class="time__paragraph">Tienes 5:00 minutos para realizar este ejercicio, concéntrate y
+                                vence el reloj. Si se acaba tu tiempo, relájate, puedes tomarte más tiempo si gustas o
+                                pasar al siguiente ejercicio.</p>
+                    </section>
+
+                    <section class="time__button">
+                        <a href="#" class="time__link" id="btnLink"><button class="time__btn" id="time__btn"> 4:59 </button></a>
+                    </section>
+                </div>
+
+                <! --CUADRO DE SOLUCIÓN-->
+                    <div class="solu">
+                        <section class="solu__text">
+                            <h1 class="solu__title">Solucionalo</h2>
+                                <h2 class="solu__subtitle">Pulsa los botones hasta obtener 3 círculos</h2>
+                                <p class="solu__paragraph">Hazlo por medio de las equivalencias dadas anteriormente.
+                                </p>
+                        </section>
+
+                        <section class="solu__here" id="Descomposicion">
+                            <script src="../Scripts/Descomponer/BotonesDescomponer.js"></script>
+                            <script src="../Scripts/Descomponer/FiguraDescomponer.js"></script>
+                            <script src="../Scripts/Descomponer/Descomposicion.js"></script>
+                        </section>
+                    </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

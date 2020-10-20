@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../Styles/form.css">
+    <script src="../Scripts/main.js"></script>
+    <title>Techhase | Encuesta corta</title>
+</head>
+
+<body>
+    <header class="ppal">
+        <section class="menu">
+            <a href="Index.html" class="menu">
+                <img src="../Imagenes/Logo horizontal.png" alt="Techhase" class="menu__logo">
+            </a>
+        </section>
+    </header>
+
+    <div class="formu">
+        <! --FORMULARIO-->
+            <div class="form">
+                <section class="form__text">
+                    <h1 class="form__title">Hola </h2>
+                        <h2 class="form__subtitle">¡Vamos a poner algo!</h2>
+                        <p class="form__paragraph">Por medio de actividades diagnosticas deseamos obtener información
+                            sobre las habilidades de razonamiento lógico formal y resolución de problemas, con el fin de
+                            recolectar datos para trabajo de campo en Proyecto de Grado I.
+                            <br><br>
+                            Tus datos no se compartirán con nadie a parte de nosotros, por eso tus respuestas son muy
+                            importantes para nosotros, por favor contesta con honestidad.
+                            <br><br>
+                            Gracias por tu colaboración.</p>
+                </section>
+                <section class="form__form">
+                    <div class="form__1">
+                        <p class="form__question">Inserte inicial del nombre y apellido</p>
+                        <p class="form__desc">Ejemplo: Si te llamas Pepito Gonzales, ecribes PG</p>
+                        <input type="text" id="nombre" class="form__input" placeholder="Inicial del nombre y apellido">
+                    </div>
+
+                    <div class="form__1">
+                        <p class="form__question">¿De qué Universidad eres?</p>
+                        <input type="text" id="universidad" class="form__input" placeholder="Universidad ...">
+                    </div>
+
+                    <div class="form__1">
+                        <p class="form__question">¿En qué semestre te encuentras?</p>
+                        <p class="form__desc">Escribir solo el número. Ejemplo: Si estás en semestre tres, escribes (3).
+                            En el caso de estar graduado, escribir (Graduado)</p>
+                        <input type="text" id="semestre" class="form__input" placeholder="0">
+                    </div>
+
+                    <div class="form__1">
+                        <p class="form__question">¿Hace cuanto programas?</p>
+                        <select id="tiempo-programacion" class="form__select">
+                            <option disabled selected> Selecciona una opción... </option>
+                            <option value="nunca">Nunca</option>
+                            <option value="menos de un año">Menos de un año</option>
+                            <option value="más de un año">Más de un año</option>
+                            <option value="tres o más años">Tres o más años</option>
+                        </select>
+                    </div>
+                </section>
+                <section class="form__button">
+                    <!--  -->
+                    <button class="form__btn" id="myBtn">Enviar </button>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <img src="../Imagenes/Check-vector.png" alt="Check" class="modal-content__img">
+                            <h2 class="modal-content__subtitle">Tus datos se han enviado correctamente.</h2>
+                            <p class="modal-content__paragraph">Ahora empecemos con las actividades diagnosticas,
+                                esperamos sean de tu agrado y te diviertas realizandolas.</p>
+                            <a href="Ejercicios.html" class="form__link"><button class="modal-content__btn"
+                                    id="myBtn">Continuar</button>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+    </div>
+
+</body>
+
+</html>

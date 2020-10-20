@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../Styles/ejercicio4.css">
+    <script src="../Scripts/ejercicio4.js"></script>
+
+    <title>Techhase | Depuración</title>
+</head>
+
+<body>
+    <script src="../Libs/p5.js"></script>
+    <header class="ppal">
+        <section class="menu">
+            <a href="Ejercicios.html" class="menu">
+                <img src="../Imagenes/Logo horizontal.png" alt="Techhase" class="menu__logo">
+            </a>
+        </section>
+    </header>
+
+    <div class="ejercicios">
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <h2 class="modal-content__subtitle">Instrucciones</h2>
+                <p class="modal-content__paragraph">En este ejercicio tenemos que realizar un nonograma. Consiste en un
+                    rompecabezas en el que colorear las celdas correctas de la cuadrícula, de acuerdo con los números a
+                    los lados de la misma, con el fin de revelar una imagen oculta.
+                    <br><br>
+                    Cada número es igual a la cantidad de celdas que debes colorear tanto en filas como en columnas.
+                    <br><br>
+                    Para empezar primero haremos un rompecabezas pequeño y luego continuaremos con uno más grande.
+                    .</p>
+                <a class="form__link"><button class="modal-content__btn" id="myBtn">Continuar</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="fil">
+            <! --PRIMER EJERCICIO-->
+                <div class="ejer">
+                    <section class="ejer__text">
+                        <h1 class="ejer__title">Nonograma</h2>
+                            <h2 class="ejer__subtitle">¡A construir!</h2>
+                            <p class="ejer__paragraph">Realiza este pequeño rompecabezas y luego retate a ti mismo para
+                                realizar otro.</p>
+                    </section>
+                    <section class="ejer__ejer" id="Evaluacion">
+                        <script src="../Scripts/Evaluacion/Casilla.js"></script>
+                        <script src="../Scripts/Evaluacion/Evaluacion.js"></script>
+                    </section>
+                </div>
+        </div>
+
+        <div class="fil">
+            <! --CUADRO DE TIEMPO-->
+                <div class="time">
+                    <section class="time__text">
+                        <h1 class="time__title">¡Contra el reloj!</h2>
+                            <p class="time__paragraph">Tienes 5:00 minutos para realizar este ejercicio, concentrate y
+                                vence el reloj, si lo deseas puedes tomarte más tiempo</p>
+
+                    </section>
+
+                    <section class="time__button">
+                        <a href="#" class="time__link" id="btnLink"><button class="time__btn" id="time__btn"> 4:59 </button></a>
+                    </section>
+                </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../Styles/ejercicio2.css">
+    <script src="../Scripts/ejercicio2.js"></script>
+
+    <title>Techhase | Abstracción</title>
+</head>
+
+<body>
+    <script src="../Libs/p5.js"></script>
+    <header class="ppal">
+        <section class="menu">
+            <a href="Ejercicios.html" class="menu">
+                <img src="../Imagenes/Logo horizontal.png" alt="Techhase" class="menu__logo">
+            </a>
+        </section>
+    </header>
+
+    <div class="ejercicios">
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <h2 class="modal-content__subtitle">Instrucciones</h2>
+                <p class="modal-content__paragraph">El razonamiento es algo que usamos a diario, nos permite estructurar y organizar pensamientos para llegar a una conclusión. Por otra parte, la abstracción separa conceptos particulares de un mismo objeto para analizarlos de forma aislada.
+                    <br><br>
+                    Juntos forman el razonamiento abstracto para resolver problemas lógicos.
+                    <br><br>
+                    En estos ejercicios deberás usar el razonamiento abstracto y reemplazar el cuadro de la incógnita por una de las opciones que te ponemos al lado (a, b, c).
+                    </p>
+                <a class="form__link"><button class="modal-content__btn"
+                        id="myBtn">Continuar</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="fil">
+            <! --PRIMER EJERCICIO-->
+                <div class="ejer">
+                    <section class="ejer__text">
+                        <h1 class="ejer__title">Pensamiento lógico</h2>
+                            <h2 class="ejer__subtitle">¡Vamos a pensar!</h2>
+                            <p class="ejer__paragraph">Analiza el problema y elige la opción más acorde.</p>
+                    </section>
+                    <section class="ejer__ejer" id="Abstraccion">
+                        <script src="../Scripts/Abstraccion/Ejercicios.js"></script>
+                        <script src="../Scripts/Abstraccion/Casilla.js"></script>
+                        <script src="../Scripts/Abstraccion/Abstraccion.js"></script>
+                    </section>
+                </div>
+        </div>
+
+        <div class="fil">
+            <! --CUADRO DE TIEMPO-->
+                <div class="time">
+                    <section class="time__text">
+                        <h1 class="time__title">¡Contra el reloj!</h2>
+                            <p class="time__paragraph">Tienes 5:00 minutos para realizar este ejercicio, concentrate y
+                                vence el reloj, si lo deseas puedes tomarte más tiempo</p>
+
+                    </section>
+
+                    <section class="time__button">
+                        <a href="#" class="time__link" id="btnLink"><button class="time__btn" id="time__btn"> 4:59 </button></a>
+                    </section>
+                </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
