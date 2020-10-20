@@ -11,8 +11,6 @@ window.onload = function () {
 
 
   btnTime.onclick = function () {
-    sessionStorage.setItem("tiempoDescomposicion", min + ":" + seg);
-    sessionStorage.setItem("Ejercicio1completo", "true");
     if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {
       link = document.getElementById("btnLink");
       link.setAttribute('href', "Experiencia.html");
@@ -31,6 +29,8 @@ window.onload = function () {
      
     if (contando == true) {
       if ( timeBtn.textContent == "Continuar") {
+        sessionStorage.setItem("tiempoDescomposicion", min + ":" + seg);
+        sessionStorage.setItem("Ejercicio1completo", "true");
         contando = false;  
       }
       seg++;

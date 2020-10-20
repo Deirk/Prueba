@@ -12,9 +12,6 @@ window.onload = function () {
 
 
   btnTime.onclick = function () {
-    sessionStorage.setItem("tiempoGeneralizacion", min + ":" + seg);
-    sessionStorage.setItem("Ejercicio3completo", "true");    
-    sessionStorage.setItem("respuestaGeneralizacion", textoRespuesta.value);
     if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {
       link = document.getElementById("btnLink");
       link.setAttribute('href', "Experiencia.html");
@@ -33,6 +30,9 @@ window.onload = function () {
 
     if (contando == true) {
       if (timeBtn.textContent == "Continuar") {
+        sessionStorage.setItem("tiempoGeneralizacion", min + ":" + seg);
+        sessionStorage.setItem("Ejercicio3completo", "true");
+        sessionStorage.setItem("respuestaGeneralizacion", textoRespuesta.value);
         contando = false;
       }
       seg++;
