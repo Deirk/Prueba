@@ -109,7 +109,7 @@ new p5(function (app) {
                 app.fill(24, 195, 200);
                 app.textSize(app.width * 0.04);
                 app.text("Has completado el ejercicio", app.width / 2, app.height * 0.68);
-                app.text("!Muchas gracias", app.width / 2, app.height * 0.73);
+                app.text("¡Muchas gracias!", app.width / 2, app.height * 0.73);
 
                
                 if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {

@@ -21,6 +21,7 @@ window.onload = function(){
                 if (ejer1 == false) {
                     descoLink.setAttribute('href', "#");
                     descoBtn.style.background = "gray"
+                    descoBtn.textContent = "Completado"
                     ejer1 = true;
                 }
             }
@@ -28,6 +29,7 @@ window.onload = function(){
                 if (ejer2 == false) {
                     abstLink.setAttribute('href', "#");
                     abstBtn.style.background = "gray"
+                    abstBtn.textContent = "Completado"
                     ejer2 = true;
                 }
             }
@@ -35,6 +37,7 @@ window.onload = function(){
                 if (ejer3 == false) {
                     geneLink.setAttribute('href', "#");
                     geneBtn.style.background = "gray"
+                    geneBtn.textContent = "Completado"
                     ejer3 = true;
                 }
             }
@@ -42,6 +45,7 @@ window.onload = function(){
                 if (ejer4 == false) {
                     depuLink.setAttribute('href', "#");
                     depuBtn.style.background = "gray"
+                    depuBtn.textContent = "Completado"
                     ejer4 = true;
                 }
             }
