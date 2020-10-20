@@ -15,6 +15,13 @@
 </head>
 
 <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="../Scripts/SaveFirebase.js"></script>
+    <script src="../Scripts/Final.js"></script>
     <header class="ppal">
         <section class="menu">
             <a href="Index.html" class="menu">
@@ -29,12 +36,13 @@
                 <section class="form__text">
                     <h1 class="form__title">Gracias por participar </h2>
                         <h2 class="form__subtitle">¡Ayudanos a ser mejores!</h2>
-                        <p class="form__paragraph">Dinos tu sincera opinión sobre cada una de las actividades que realizaste.</p>
+                        <p class="form__paragraph">Dinos tu sincera opinión sobre cada una de las actividades que
+                            realizaste.</p>
                 </section>
                 <section class="form__form">
                     <div class="form__1">
                         <p class="form__question">¿Cómo te parecio el ejercicio de descomposición?</p>
-                        <select id="tiempo-programacion" class="form__select">
+                        <select id="ExperienciaEjecicio1" class="form__select">
                             <option disabled selected> Selecciona una opción... </option>
                             <option value="pesimo">Pésimo</option>
                             <option value="muy malo">Muy malo</option>
@@ -47,7 +55,7 @@
 
                     <div class="form__1">
                         <p class="form__question">¿Cómo te parecio el ejercicio de abstracción?</p>
-                        <select id="tiempo-programacion" class="form__select">
+                        <select id="ExperienciaEjecicio2" class="form__select">
                             <option disabled selected> Selecciona una opción... </option>
                             <option value="pesimo">Pésimo</option>
                             <option value="muy malo">Muy malo</option>
@@ -60,7 +68,7 @@
 
                     <div class="form__1">
                         <p class="form__question">¿Cómo te parecio el ejercicio de generalización?</p>
-                        <select id="tiempo-programacion" class="form__select">
+                        <select id="ExperienciaEjecicio3" class="form__select">
                             <option disabled selected> Selecciona una opción... </option>
                             <option value="pesimo">Pésimo</option>
                             <option value="muy malo">Muy malo</option>
@@ -73,7 +81,7 @@
 
                     <div class="form__1">
                         <p class="form__question">¿Cómo te parecio el ejercicio de depuración?</p>
-                        <select id="tiempo-programacion" class="form__select">
+                        <select id="ExperienciaEjecicio4" class="form__select">
                             <option disabled selected> Selecciona una opción... </option>
                             <option value="pesimo">Pésimo</option>
                             <option value="muy malo">Muy malo</option>
@@ -97,7 +105,7 @@
                 </section>
                 <section class="form__button">
                     <!--  -->
-                    <button class="form__btn" id="myBtn">Finalizar </button>
+                   <button class="form__btn" id="myBtn" >Finalizar </button>
 
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
@@ -108,7 +116,7 @@
                             <h2 class="modal-content__subtitle">Tus datos se han enviado correctamente.</h2>
                             <p class="modal-content__paragraph">Ahora empecemos con las actividades diagnosticas,
                                 esperamos sean de tu agrado y te diviertas realizandolas.</p>
-                            <a href="Ejercicios.html" class="form__link"><button class="modal-content__btn"
+                            <a href="./index.html" class="form__link"><button class="modal-content__btn"
                                     id="myBtn">Continuar</button>
                             </a>
                         </div>

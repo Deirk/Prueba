@@ -16,7 +16,6 @@ btn.onclick = function() {
   sessionStorage.setItem("universidad",universidad.value);
   sessionStorage.setItem("semestre",semestre.value);
   sessionStorage.setItem("tiempoProgramando", tiempoProgramacion.options[tiempoProgramacion.selectedIndex].value);
-  console.log("Entro");
   modal.style.display = "block";
 }
 

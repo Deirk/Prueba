@@ -111,13 +111,17 @@ new p5(function (app) {
                 app.text("Has completado el ejercicio", app.width / 2, app.height * 0.68);
                 app.text("!Muchas gracias", app.width / 2, app.height * 0.73);
 
-                var timeBtn = document.getElementById("time__btn");
-                var link;
-                timeBtn.textContent = "Continuar" ;
+               
                 if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {
+                    var timeBtn = document.getElementById("time__btn");
+                    var link;
+                    timeBtn.textContent = "Continuar" ;
                     link = document.getElementById("btnLink");
                     link.setAttribute('href', "Experiencia.html");
-                } else {
+                } else {   
+                    var timeBtn = document.getElementById("time__btn");
+                    var link;
+                    timeBtn.textContent = "Continuar" ;                 
                     link = document.getElementById("btnLink");
                     link.setAttribute('href', "Ejercicios.html");
                 }

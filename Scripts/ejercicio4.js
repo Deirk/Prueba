@@ -27,10 +27,10 @@ window.onload = function(){
     }
 
     function timer() {
-     
+
       if (contando == true) {
-        if ( timeBtn.textContent == "Continuar") {
-          contando = false;  
+        if (timeBtn.textContent == "Continuar") {
+          contando = false;
         }
         seg++;
         tiempoS--;
@@ -48,7 +48,7 @@ window.onload = function(){
           var link = document.getElementById("btnLink");
           contando = false;
           link.setAttribute('href', "Ejercicios.html");
-        }        
+        }
       }
     }
   
