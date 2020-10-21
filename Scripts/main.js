@@ -8,6 +8,7 @@ var nombre = document.getElementById("nombre");
 var universidad = document.getElementById("universidad");
 var semestre = document.getElementById("semestre");
 var tiempoProgramacion = document.getElementById("tiempo-programacion");
+var carrera = document.getElementById("carrera");
 
 
 // When the user clicks the button, open the modal 
@@ -16,6 +17,7 @@ btn.onclick = function() {
   sessionStorage.setItem("universidad",universidad.value);
   sessionStorage.setItem("semestre",semestre.value);
   sessionStorage.setItem("tiempoProgramando", tiempoProgramacion.options[tiempoProgramacion.selectedIndex].value);
+  sessionStorage.setItem("carrera", carrera.value);
   modal.style.display = "block";
 }
 
