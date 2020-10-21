@@ -112,7 +112,7 @@ class Casilla {
                     this.app.text(this.info[i], (this.x + this.w4), (this.y + this.h4 / 3));
                 } else if (this.info[i] != "?") {
                     if (this.info[i] == 1) {
-                        this.app.fill(24, 195, 200);
+                        this.app.fill(0);
                     } else {
                         this.app.fill(14, 231, 136);
                     }

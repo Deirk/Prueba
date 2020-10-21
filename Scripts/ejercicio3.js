@@ -23,6 +23,7 @@ window.onload = function () {
 
   btn.onclick = function () {
     modal.style.display = "none";
+    setInterval(timer, 1000);
   }
 
   function timer() {
@@ -46,6 +47,7 @@ window.onload = function () {
       }
       timeBtn.textContent = tiempoM + ":" + tiempoS;
       if (tiempoM <= 0) {
+        sessionStorage.setItem("Ejercicio3completo", "true");
         timeBtn.textContent = "Continuar";
         var link = document.getElementById("btnLink");
         contando = false;
@@ -54,6 +56,4 @@ window.onload = function () {
     }
   }
 
-
-  setInterval(timer, 1000);
 };
