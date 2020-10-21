@@ -4,17 +4,16 @@ window.onload = function () {
   var seg = 0;
   var min = 0;
   var contando = true;
-  var tiempoM = 5;
+  var tiempoM = 4;
   var tiempoS = 0;
   var modal = document.getElementById("myModal");
   var btnTime = document.getElementById("time__btn");
-
 
   btnTime.onclick = function () {
     if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {
       link = document.getElementById("btnLink");
       link.setAttribute('href', "Experiencia.html");
-  }
+    }
   }
 
   modal.style.display = "block";
@@ -26,12 +25,12 @@ window.onload = function () {
   }
 
   function timer() {
-     
+
     if (contando == true) {
-      if ( timeBtn.textContent == "Continuar") {
+      if (timeBtn.textContent == "Continuar") {
         sessionStorage.setItem("tiempoDescomposicion", min + ":" + seg);
         sessionStorage.setItem("Ejercicio1completo", "true");
-        contando = false;  
+        contando = false;
       }
       seg++;
       tiempoS--;
@@ -49,7 +48,7 @@ window.onload = function () {
         var link = document.getElementById("btnLink");
         contando = false;
         link.setAttribute('href', "Ejercicios.html");
-      }        
+      }
     }
   }
 

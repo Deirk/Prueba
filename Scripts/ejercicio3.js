@@ -4,12 +4,11 @@ window.onload = function () {
   var seg = 0;
   var min = 0;
   var contando = true;
-  var tiempoM = 5;
+  var tiempoM = 3;
   var tiempoS = 0;
   var modal = document.getElementById("myModal");
   var btnTime = document.getElementById("time__btn");
   var textoRespuesta = document.getElementById("solu__imput");
-
 
   btnTime.onclick = function () {
     if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {
