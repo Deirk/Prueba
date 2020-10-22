@@ -1,6 +1,6 @@
 window.onload = function(){
 
-    var database = new SaveFirebase();
+    var database = new SaveFirebase("pruebas");
 
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");

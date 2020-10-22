@@ -15,6 +15,8 @@ window.onload = function () {
       link = document.getElementById("btnLink");
       link.setAttribute('href', "Experiencia.html");
     }
+    sessionStorage.setItem("tiempoGeneralizacion", min + ":" + seg);
+    sessionStorage.setItem("respuestaGeneralizacion", textoRespuesta.value);
   }
 
   modal.style.display = "block";

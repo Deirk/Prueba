@@ -13,6 +13,7 @@ window.onload = function () {
     if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {
       link = document.getElementById("btnLink");
       link.setAttribute('href', "Experiencia.html");
+      sessionStorage.setItem("tiempoEvaluacion", min + ":" + seg);
     }
   }
 

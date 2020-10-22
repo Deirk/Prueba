@@ -13,6 +13,11 @@ var carrera = document.getElementById("carrera");
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
+
+ /*if (nombre.value != null && universidad.value != null && tiempoProgramacion.options[tiempoProgramacion.selectedIndex].value != null && ) {
+    
+  }*/
+  //Ejercicios.html
   sessionStorage.setItem("nombre",nombre.value);
   sessionStorage.setItem("universidad",universidad.value);
   sessionStorage.setItem("semestre",semestre.value);

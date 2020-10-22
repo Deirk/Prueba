@@ -1,6 +1,6 @@
 class SaveFirebase {
 
-    constructor() {
+    constructor(referencia) {
         this.firebaseConfig = {
             apiKey: "AIzaSyCLXFTnjqw6KhJhYEHu0l0c4b2bFIzI-LU",
             authDomain: "recoleccion-de-datos-para-pdg.firebaseapp.com",
@@ -16,7 +16,7 @@ class SaveFirebase {
           firebase.analytics();
           console.log(firebase);
           this.database = firebase.database();
-          this.ref = this.database.ref('pruebas');
+          this.ref = this.database.ref(""+referencia);
           
     }
 

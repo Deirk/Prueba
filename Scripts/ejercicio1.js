@@ -12,6 +12,7 @@ window.onload = function () {
   btnTime.onclick = function () {
     if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {
       link = document.getElementById("btnLink");
+      sessionStorage.setItem("tiempoDescomposicion", min + ":" + seg);
       link.setAttribute('href', "Experiencia.html");
     }
   }
