@@ -15,6 +15,7 @@ window.onload = function () {
       sessionStorage.setItem("tiempoDescomposicion", min + ":" + seg);
       link.setAttribute('href', "Experiencia.html");
     }
+    sessionStorage.setItem("tiempoDescomposicion", min + ":" + seg);
   }
 
   modal.style.display = "block";
@@ -51,6 +52,7 @@ window.onload = function () {
       }
       
       if (tiempoM < 0)  {
+        sessionStorage.setItem("tiempoDescomposicion", min + ":" + seg);
         sessionStorage.setItem("Ejercicio1completo", "true");
         timeBtn.textContent = "Continuar";
         var link = document.getElementById("btnLink");

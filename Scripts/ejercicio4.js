@@ -15,6 +15,7 @@ window.onload = function () {
       link.setAttribute('href', "Experiencia.html");
       sessionStorage.setItem("tiempoEvaluacion", min + ":" + seg);
     }
+    sessionStorage.setItem("tiempoEvaluacion", min + ":" + seg);
   }
 
   modal.style.display = "block";
