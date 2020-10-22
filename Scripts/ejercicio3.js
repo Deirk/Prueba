@@ -51,7 +51,7 @@ window.onload = function () {
       } else {
         timeBtn.textContent = tiempoM + ":" + tiempoS;
       }
-      if (tiempoM <= 0) {
+      if (tiempoM < 0) {
         sessionStorage.setItem("Ejercicio3completo", "true");
         timeBtn.textContent = "Continuar";
         var link = document.getElementById("btnLink");
