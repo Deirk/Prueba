@@ -44,8 +44,8 @@ class SaveFirebase {
             ExperienciaEjercicio2: sessionStorage.getItem("ExperienciaEjecicio2"),
             ExperienciaEjercicio3: sessionStorage.getItem("ExperienciaEjecicio3"),
             ExperienciaEjercicio4: sessionStorage.getItem("ExperienciaEjecicio4"),
-            loQueNoLeGusto: sessionStorage.getItem("LoQueMasLeGusto"),
-            loQueSiLeGusto: sessionStorage.getItem("LoQueMenosLeGusto")
+            loQueLeGusto: sessionStorage.getItem("LoQueMasLeGusto"),
+            loQueNoLeGusto: sessionStorage.getItem("LoQueMenosLeGusto")
 
         }
         this.ref.push(data);
