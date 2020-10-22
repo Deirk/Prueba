@@ -43,7 +43,11 @@ window.onload = function () {
         min++;
         seg = 0;
       }
-      timeBtn.textContent = tiempoM + ":" + tiempoS;
+      if (tiempoS < 10) {
+        timeBtn.textContent = tiempoM + ":0" + tiempoS;
+      } else {
+        timeBtn.textContent = tiempoM + ":" + tiempoS;
+      }
       if (tiempoM <= 0) {
         sessionStorage.setItem("Ejercicio3completo", "true");
         timeBtn.textContent = "Continuar";
