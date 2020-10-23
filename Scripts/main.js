@@ -9,6 +9,7 @@ window.onload = function () {
   var universidad = document.getElementById("universidad");
   var semestre = document.getElementById("semestre");
   var tiempoProgramacion = document.getElementById("tiempo-programacion");
+  var consideraProgramacion = document.getElementById("considera-programacion");
   var carrera = document.getElementById("carrera");
 
 
@@ -22,14 +23,15 @@ window.onload = function () {
     sessionStorage.setItem("nombre", nombre.value);
     sessionStorage.setItem("universidad", universidad.value);
     sessionStorage.setItem("semestre", semestre.value);
-    sessionStorage.setItem("tiempoProgramando", tiempoProgramacion.options[tiempoProgramacion.selectedIndex].value);
     sessionStorage.setItem("carrera", carrera.value);
+    sessionStorage.setItem("tiempoProgramando", tiempoProgramacion.options[tiempoProgramacion.selectedIndex].value);
+    sessionStorage.setItem("consideraProgramando", consideraProgramacion.options[consideraProgramacion.selectedIndex].value);
   }
   
     function isComplete() {
       
       if (nombre.value != "" && universidad.value != "" && 
-      tiempoProgramacion.selectedIndex != 0 && semestre.value != "" && carrera.value != "") {
+      tiempoProgramacion.selectedIndex != 0 && consideraProgramacion.selectedIndex != 0 && semestre.value != "" && carrera.value != "") {
         console.log("entro");
         complete = true;
         btn.style.background = "#18C3C8"

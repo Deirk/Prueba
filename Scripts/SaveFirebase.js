@@ -16,8 +16,7 @@ class SaveFirebase {
           firebase.analytics();
           console.log(firebase);
           this.database = firebase.database();
-          this.ref = this.database.ref(""+referencia);
-          
+          this.ref = this.database.ref(""+referencia);  
     }
 
    save(){
@@ -27,6 +26,7 @@ class SaveFirebase {
             semestre: sessionStorage.getItem("semestre"),
             carrera: sessionStorage.getItem("carrera"),
             HaceCuantoPrograma: sessionStorage.getItem("tiempoProgramando"),
+            ComoSeConsideraProgramando: sessionStorage.getItem("consideraProgramando"),
             respuestaDescomposicion: sessionStorage.getItem("RespuestaDescomposicion"),
             tiempoDescomposicion: sessionStorage.getItem("tiempoDescomposicion"),
             erroresDescomposicion: sessionStorage.getItem("ErroresDescomposicion"),
