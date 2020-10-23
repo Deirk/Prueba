@@ -29,7 +29,7 @@ window.onload = function () {
 
   function timer() {
 
-    if (contando == true) {
+
       if (timeBtn.textContent == "Continuar") {
         sessionStorage.setItem("tiempoEvaluacion", min + ":" + seg);
         sessionStorage.setItem("Ejercicio4completo", "true");
@@ -45,6 +45,7 @@ window.onload = function () {
         min++;
         seg = 0;
       }
+      if (contando == true) {
       if (tiempoS < 10) {
         timeBtn.textContent = tiempoM + ":0" + tiempoS;
       } else {
