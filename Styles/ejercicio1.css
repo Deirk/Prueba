@@ -447,6 +447,12 @@ body {
   letter-spacing: .1em;
 }
 
+.modal-content__img {
+  margin: 0;
+  padding: 1em;
+  width: 65%;
+}
+
 .modal-content__btn {
   width: 100%;
   margin: 1%;

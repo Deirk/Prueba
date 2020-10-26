@@ -252,8 +252,8 @@ body{
   /* Modal Content */
   .modal-content {
     margin: auto;
-    width: 25%;
-    height: 45%;
+    width: 30%;
+    height: 60%;
     padding: 8em;
     display: flex;
     align-content: center;
@@ -281,6 +281,12 @@ body{
       text-align: center;
       font-size: 0.9vw;
       letter-spacing: .1em;
+  }
+
+  &__img{
+      margin: 0;
+      padding: .5em;
+      width: 90%;
   }
 
   &__btn{

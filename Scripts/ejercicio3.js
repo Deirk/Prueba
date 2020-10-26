@@ -14,6 +14,8 @@ window.onload = function () {
     if (sessionStorage.getItem("Ejercicio1completo") == "true" && sessionStorage.getItem("Ejercicio2completo") == "true" && sessionStorage.getItem("Ejercicio3completo") == "true" && sessionStorage.getItem("Ejercicio4completo") == "true") {
       link = document.getElementById("btnLink");
       link.setAttribute('href', "Experiencia.html");
+      sessionStorage.setItem("tiempoGeneralizacion", min + ":" + seg);
+      sessionStorage.setItem("respuestaGeneralizacion", textoRespuesta.value);
     }
     sessionStorage.setItem("tiempoGeneralizacion", min + ":" + seg);
     sessionStorage.setItem("respuestaGeneralizacion", textoRespuesta.value);
@@ -55,6 +57,7 @@ window.onload = function () {
       }
       if (tiempoM < 0) {
         sessionStorage.setItem("tiempoGeneralizacion", min + ":" + seg);
+        sessionStorage.setItem("respuestaGeneralizacion", textoRespuesta.value);
         sessionStorage.setItem("Ejercicio3completo", "true");
         timeBtn.textContent = "Continuar";
         var link = document.getElementById("btnLink");
