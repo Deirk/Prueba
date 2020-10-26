@@ -1,7 +1,7 @@
 window.onload = function () {
 
   var database = new SaveFirebase("pruebas");
-  var isComplete = false;
+  var complete = false;
 
   // Get the button that opens the modal
   var btn = document.getElementById("myBtn");
@@ -18,10 +18,11 @@ window.onload = function () {
   }
 
   function save() {
-    if(isComplete == false){
+    if(complete == false){
     database.save();
     var link = document.getElementById("form__link");
     link.setAttribute('href', "final.html");
+    complete = true;
     }
   }
 
