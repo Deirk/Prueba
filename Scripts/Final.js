@@ -20,7 +20,12 @@ window.onload = function () {
     sessionStorage.setItem("ExperienciaEjecicio4", ExperienciaEjecicio4.options[ExperienciaEjecicio4.selectedIndex].value);
     sessionStorage.setItem("LoQueMasLeGusto", mas.value);
     sessionStorage.setItem("LoQueMenosLeGusto", menos.value);
-    database.save();
+    
+  }
+
+  function save(){
+    var link = document.getElementById("form__link");
+      link.setAttribute('href', "final.html");
   }
 
   function isComplete() {
@@ -29,8 +34,8 @@ window.onload = function () {
       ExperienciaEjecicio4.selectedIndex != 0 && mas.value != "" && menos.value != "") {
       console.log("entro");
       btn.style.background = "#18C3C8"
-      var link = document.getElementById("form__link");
-      link.setAttribute('href', "final.html");
+      database.save();
+      setTimeout(save(),1000);
     } else {
       btn.style.background = "gray"
     }
