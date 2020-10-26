@@ -14,28 +14,28 @@ window.onload = function () {
   //final.html
   // When the user clicks the button, open the modal 
   btn.onclick = function () {
-    sessionStorage.setItem("ExperienciaEjecicio1", ExperienciaEjecicio1.options[ExperienciaEjecicio1.selectedIndex].value);
-    sessionStorage.setItem("ExperienciaEjecicio2", ExperienciaEjecicio2.options[ExperienciaEjecicio2.selectedIndex].value);
-    sessionStorage.setItem("ExperienciaEjecicio3", ExperienciaEjecicio3.options[ExperienciaEjecicio3.selectedIndex].value);
-    sessionStorage.setItem("ExperienciaEjecicio4", ExperienciaEjecicio4.options[ExperienciaEjecicio4.selectedIndex].value);
-    sessionStorage.setItem("LoQueMasLeGusto", mas.value);
-    sessionStorage.setItem("LoQueMenosLeGusto", menos.value);
-    
   }
 
-  function save(){
+  function save() {
+    database.save();
     var link = document.getElementById("form__link");
-      link.setAttribute('href', "final.html");
+    link.setAttribute('href', "final.html");
   }
 
   function isComplete() {
 
     if (ExperienciaEjecicio1.selectedIndex != 0 && ExperienciaEjecicio2.selectedIndex != 0 && ExperienciaEjecicio3.selectedIndex != 0 &&
       ExperienciaEjecicio4.selectedIndex != 0 && mas.value != "" && menos.value != "") {
+      sessionStorage.setItem("ExperienciaEjecicio1", ExperienciaEjecicio1.options[ExperienciaEjecicio1.selectedIndex].value);
+      sessionStorage.setItem("ExperienciaEjecicio2", ExperienciaEjecicio2.options[ExperienciaEjecicio2.selectedIndex].value);
+      sessionStorage.setItem("ExperienciaEjecicio3", ExperienciaEjecicio3.options[ExperienciaEjecicio3.selectedIndex].value);
+      sessionStorage.setItem("ExperienciaEjecicio4", ExperienciaEjecicio4.options[ExperienciaEjecicio4.selectedIndex].value);
+      sessionStorage.setItem("LoQueMasLeGusto", mas.value);
+      sessionStorage.setItem("LoQueMenosLeGusto", menos.value);
       console.log("entro");
       btn.style.background = "#18C3C8"
-      database.save();
-      setTimeout(save(),1000);
+
+      setTimeout(save(), 1000);
     } else {
       btn.style.background = "gray"
     }
