@@ -14,9 +14,10 @@ class SaveFirebase {
           // Initialize Firebase
           firebase.initializeApp(this.firebaseConfig);
           firebase.analytics();
-          console.log(firebase);
-          this.database = firebase.database();
-          this.ref = this.database.ref(""+referencia);  
+          this.referencia = referencia;
+          this.database = firebase.firestore();
+          console.log("EntroAlFirestore");
+          console.log(this.database);
     }
 
    save(){
@@ -48,7 +49,8 @@ class SaveFirebase {
             loQueNoLeGusto: sessionStorage.getItem("LoQueMenosLeGusto")
 
         }
-        this.ref.push(data);
+        //this.ref.push(data);
+        this.database.collection(this.referencia).add(data);
     }
 
 }

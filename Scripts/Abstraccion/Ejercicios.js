@@ -1,39 +1,39 @@
 class Ejercicio {
 
-    constructor(app) {
+
+    constructor(app, imagenes) {
         this.app = app;
-        this.app.noStroke();
-        this.app.textSize(this.app.width / 30)
         this.ejercicio1 = [];
+        this.imagenes = imagenes;
         for (let i = 0; i < 9; i++) {
             if (i < 6) {
-                this.ejercicio1.push(new Casilla(app, (app.width / 13) * (2 + i), (app.height / 10) * 2, 1, i));
+                this.ejercicio1.push(new Casilla(app, (app.width / 13) * (2 + i), (app.height / 10) * 2, 1, i,i));
             } else {
-                this.ejercicio1.push(new Casilla(app, (app.width / 13) * (3 + i), (app.height / 10) * 2, 1, i));
+                this.ejercicio1.push(new Casilla(app, (app.width / 13) * (3 + i), (app.height / 10) * 2, 1, i,i));
             }
         }
         this.ejercicio2 = [];
         for (let i = 0; i < 9; i++) {
             if (i < 6) {
-                this.ejercicio2.push(new Casilla(app, (app.width / 13) * (2 + i), (app.height / 10) * 4, 2, i));
+                this.ejercicio2.push(new Casilla(app, (app.width / 13) * (2 + i), (app.height / 10) * 4, 2, this.imagenes[i],i));
             } else {
-                this.ejercicio2.push(new Casilla(app, (app.width / 13) * (3 + i), (app.height / 10) * 4, 2, i));
+                this.ejercicio2.push(new Casilla(app, (app.width / 13) * (3 + i), (app.height / 10) * 4, 2, this.imagenes[i],i));
             }
         }
         this.ejercicio3 = [];
         for (let i = 0; i < 9; i++) {
             if (i < 6) {
-                this.ejercicio3.push(new Casilla(app, (app.width / 13) * (2 + i), (app.height / 10) * 6, 3, i));
+                this.ejercicio3.push(new Casilla(app, (app.width / 13) * (2 + i), (app.height / 10) * 6, 3, i,i));
             } else {
-                this.ejercicio3.push(new Casilla(app, (app.width / 13) * (3 + i), (app.height / 10) * 6, 3, i));
+                this.ejercicio3.push(new Casilla(app, (app.width / 13) * (3 + i), (app.height / 10) * 6, 3, i,i));
             }
         }
         this.ejercicio4 = [];
         for (let i = 0; i < 8; i++) {
             if (i < 5) {
-                this.ejercicio4.push(new Casilla(app, (app.width / 13) * (1.4 + i), (app.height / 10) * 8, 4, i));
+                this.ejercicio4.push(new Casilla(app, (app.width / 13) * (1.4 + i), (app.height / 10) * 8, 4, i,i));
             } else {
-                this.ejercicio4.push(new Casilla(app, (app.width / 13) * (3.4 + i), (app.height / 10) * 8, 4, i));
+                this.ejercicio4.push(new Casilla(app, (app.width / 13) * (3.4 + i), (app.height / 10) * 8, 4, i,i));
             }
         }
 
@@ -43,8 +43,11 @@ class Ejercicio {
             Abstraccion3: 0,
             Abstraccion4: 0
         }
+        
 
     }
+
+  
 
     show() {
         for (let i = 0; i < this.ejercicio1.length; i++) {

@@ -1,6 +1,7 @@
 class Casilla {
 
-    constructor(app, x, y, n, indice) {
+    constructor(app, x, y, n, indice, i) {
+        this.i = i;
         this.select = false;
         this.app = app;
         this.x = x;
@@ -11,6 +12,8 @@ class Casilla {
         this.h = this.app.width / 15;
         this.w = this.app.width / 15;
         this.indice = indice;
+        this.app.textSize(this.app.width / 30);
+        this.app.noStroke();
         this.app.textSize(this.app.width / 30);
         this.literales = ["a", "b", "c"];
         
@@ -23,8 +26,8 @@ class Casilla {
                 break;
             case 2:
                 this.info = ["🡕", "🡓", "🡔", "🡒", "🡗", "?", "🡖", "🡐", "🡑"];
-                if (this.indice>5) {
-                    this.literal = this.literales[this.indice-6];
+                if (this.i>5) {
+                    this.literal = this.literales[this.i-6];
                 }
                 break;
             case 3:
@@ -129,7 +132,7 @@ class Casilla {
                 this.app.fill(180);
                 this.app.text(this.literales[this.indice - 5], (this.x + this.w4 / 1.4), this.y - (this.h));
             }
-        } else {
+        } else if(this.n != 2){
             this.app.noStroke();
             if (this.info[this.indice] == "?") {
                 this.app.fill(150, 30);
@@ -179,12 +182,61 @@ class Casilla {
                 this.app.text(this.literales[this.indice - 6], this.x, this.y - (this.h));
             }
 
+        } else {
+            this.app.noStroke();
+            if (this.indice == "?") {
+                this.app.fill(150, 30);
+                this.app.rect(this.x, this.y, this.app.width / 13, this.app.width / 13);
+            } else {
+                this.app.fill(47, 128, 237, 30);
+                this.app.rect(this.x + (this.app.width * 0.005), this.y + (this.app.width * 0.005), this.app.width / 14, this.app.width / 14);
+            }
+            if (this.i > 5) {
+                if (this.n <= 3) {
+                    if (this.app.mouseX > this.x - (this.w / 2) && this.app.mouseX < (this.w / 2) + this.x && this.app.mouseY > this.y - (this.h / 2) && this.app.mouseY < this.y + (this.h / 2)) {
+                        if(this.select){
+                            this.app.fill(249, 70, 115,150);
+                        } else {
+                        this.app.fill(47, 128, 237, 200);
+                        }
+                    } else {
+                        if(this.select){
+                            this.app.fill(249, 70, 115);
+                        } else {
+
+                        this.app.fill(47, 128, 237);
+                    }
+                }
+
+                } else {
+                    this.app.fill(47, 128, 237);
+                }
+            } else {
+                if (this.indice == "?") {
+                    this.app.fill(255);
+                } else {
+                    this.app.fill(47, 128, 237);
+                }
+
+            }
+            this.app.rect(this.x, this.y, this.w, this.h);
+            if (this.indice == "?") {
+                this.app.fill(200);
+                this.app.text(this.indice, this.x, this.y);
+            } else {
+                this.app.image(this.indice,this.x,this.y,this.w*0.5,this.w*0.7);
+            }
+
+            if (this.i > 5) {
+                this.app.fill(180);
+                this.app.text(this.literales[this.i - 6], this.x, this.y - (this.h));
+            }
         }
     }
 
     press(mx, my) {
         if (this.n <= 3) {
-            if (this.indice > 5) {
+            if (this.i > 5) {
                 if (mx > this.x - (this.w / 2) && mx < (this.w / 2) + this.x && my > this.y - (this.h / 2) && my < this.y + (this.h / 2)) {
                     return true;
                 } else {
@@ -192,7 +244,7 @@ class Casilla {
                 }
             }
         } else {
-            if (this.indice > 4) {
+            if (this.i > 4) {
                 if (this.app.mouseX > this.x + (this.w4 * 0.2) && this.app.mouseX < (this.w4 * 1.3) + this.x && this.app.mouseY > this.y - (this.h4 / 6) && this.app.mouseY < this.y + (this.h4 * 1.4)) {
                     return true;
                 } else {
