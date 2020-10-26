@@ -1,6 +1,7 @@
 window.onload = function () {
 
   var database = new SaveFirebase("pruebas");
+  var isComplete = false;
 
   // Get the button that opens the modal
   var btn = document.getElementById("myBtn");
@@ -17,9 +18,11 @@ window.onload = function () {
   }
 
   function save() {
+    if(isComplete == false){
     database.save();
     var link = document.getElementById("form__link");
     link.setAttribute('href', "final.html");
+    }
   }
 
   function isComplete() {
@@ -34,7 +37,6 @@ window.onload = function () {
       sessionStorage.setItem("LoQueMenosLeGusto", menos.value);
       console.log("entro");
       btn.style.background = "#18C3C8"
-
       setTimeout(save(), 1000);
     } else {
       btn.style.background = "gray"
