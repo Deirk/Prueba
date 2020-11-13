@@ -23,10 +23,12 @@ class SaveFirebase {
    save(){
         var data = {
             iniciales: sessionStorage.getItem("nombre"),
+            edad: sessionStorage.getItem("edad"),
             universidad: sessionStorage.getItem("universidad"),
-            semestre: sessionStorage.getItem("semestre"),
             carrera: sessionStorage.getItem("carrera"),
+            semestre: sessionStorage.getItem("semestre"),
             HaceCuantoPrograma: sessionStorage.getItem("tiempoProgramando"),
+            DiasProgramando: sessionStorage.getItem("diasProgramando"),
             ComoSeConsideraProgramando: sessionStorage.getItem("consideraProgramando"),
             respuestaDescomposicion: sessionStorage.getItem("RespuestaDescomposicion"),
             tiempoDescomposicion: sessionStorage.getItem("tiempoDescomposicion"),

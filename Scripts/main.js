@@ -6,11 +6,13 @@ window.onload = function () {
   // Get the button that opens the modal
   var btn = document.getElementById("form__btn");
   var nombre = document.getElementById("nombre");
+  var edad = document.getElementById("edad");
   var universidad = document.getElementById("universidad");
+  var carrera = document.getElementById("carrera");
   var semestre = document.getElementById("semestre");
   var tiempoProgramacion = document.getElementById("tiempo-programacion");
+  var diasProgramacion = document.getElementById("dias-programacion");
   var consideraProgramacion = document.getElementById("considera-programacion");
-  var carrera = document.getElementById("carrera");
 
 
   // When the user clicks the button, open the modal 
@@ -21,16 +23,18 @@ window.onload = function () {
     
     //Ejercicios.html
     sessionStorage.setItem("nombre", nombre.value);
+    sessionStorage.setItem("edad", edad.value);
     sessionStorage.setItem("universidad", universidad.value);
-    sessionStorage.setItem("semestre", semestre.value);
     sessionStorage.setItem("carrera", carrera.value);
+    sessionStorage.setItem("semestre", semestre.value);
     sessionStorage.setItem("tiempoProgramando", tiempoProgramacion.options[tiempoProgramacion.selectedIndex].value);
+    sessionStorage.setItem("diasProgramando", diasProgramacion.value);
     sessionStorage.setItem("consideraProgramando", consideraProgramacion.options[consideraProgramacion.selectedIndex].value);
   }
   
     function isComplete() {
       
-      if (nombre.value != "" && universidad.value != "" && 
+      if (nombre.value != "" && edad.value != "" && diasProgramacion.value != "" && universidad.value != "" && 
       tiempoProgramacion.selectedIndex != 0 && consideraProgramacion.selectedIndex != 0 && semestre.value != "" && carrera.value != "") {
         console.log("entro");
         complete = true;
