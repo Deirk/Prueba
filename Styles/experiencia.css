@@ -199,12 +199,22 @@ body {
   letter-spacing: .1em;
 }
 
+.form__correo {
+  margin: 0;
+  width: 100%;
+  padding: 4em 0 .7em 0;
+  color: #18C3C8;
+  font-size: 0.9vw;
+  letter-spacing: .1em;
+  font-style: italic;
+}
+
 .form__desc {
   margin: 0;
   width: 100%;
   padding: .7em 0 2em 0;
   color: #808F9F;
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   letter-spacing: .1em;
 }
 

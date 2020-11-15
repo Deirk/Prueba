@@ -152,12 +152,22 @@ body{
         letter-spacing: .1em;
     }
 
+    &__correo{
+        margin: 0;
+        width: 100%;
+        padding: 4em 0 .7em 0;
+        color: $color-azulppal;
+        font-size: 0.9vw;
+        letter-spacing: .1em;
+        font-style: italic;
+    }
+
     &__desc{
         margin: 0;
         width: 100%;
         padding: .7em 0 2em 0;
         color: $color-text;
-        font-size: 0.9vw;
+        font-size: 0.8vw;
         letter-spacing: .1em;
     }
 

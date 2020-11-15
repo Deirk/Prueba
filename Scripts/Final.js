@@ -7,6 +7,7 @@ window.onload = function () {
   var btn = document.getElementById("myBtn");
   var mas = document.getElementById("mas");
   var menos = document.getElementById("menos");
+  var correo = document.getElementById("correo");
   var ExperienciaEjecicio1 = document.getElementById("ExperienciaEjecicio1");
   var ExperienciaEjecicio2 = document.getElementById("ExperienciaEjecicio2");
   var ExperienciaEjecicio3 = document.getElementById("ExperienciaEjecicio3");
@@ -36,6 +37,7 @@ window.onload = function () {
       sessionStorage.setItem("ExperienciaEjecicio4", ExperienciaEjecicio4.options[ExperienciaEjecicio4.selectedIndex].value);
       sessionStorage.setItem("LoQueMasLeGusto", mas.value);
       sessionStorage.setItem("LoQueMenosLeGusto", menos.value);
+      sessionStorage.setItem("correo", correo.value);
       console.log("entro");
       btn.style.background = "#18C3C8"
       setTimeout(save(), 1000);
