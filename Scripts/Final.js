@@ -18,9 +18,9 @@ window.onload = function () {
   btn.onclick = function () {
   }
 
-  function save() {
+  async function save() {
     if(complete == false){
-    database.save();
+    await database.save();
     var link = document.getElementById("form__link");
     link.setAttribute('href', "final.html");
     complete = true;
@@ -35,8 +35,8 @@ window.onload = function () {
       sessionStorage.setItem("ExperienciaEjecicio2", ExperienciaEjecicio2.options[ExperienciaEjecicio2.selectedIndex].value);
       sessionStorage.setItem("ExperienciaEjecicio3", ExperienciaEjecicio3.options[ExperienciaEjecicio3.selectedIndex].value);
       sessionStorage.setItem("ExperienciaEjecicio4", ExperienciaEjecicio4.options[ExperienciaEjecicio4.selectedIndex].value);
-      sessionStorage.setItem("LoQueMasLeGusto", mas.value);
-      sessionStorage.setItem("LoQueMenosLeGusto", menos.value);
+      sessionStorage.setItem("mas", mas.value);
+      sessionStorage.setItem("menos", menos.value);
       sessionStorage.setItem("correo", correo.value);
       console.log("entro");
       btn.style.background = "#18C3C8"

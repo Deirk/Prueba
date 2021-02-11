@@ -20,7 +20,7 @@ class SaveFirebase {
           console.log(this.database);
     }
 
-   save(){
+   async save(){
         var data = {
             iniciales: sessionStorage.getItem("nombre"),
             edad: sessionStorage.getItem("edad"),
@@ -52,7 +52,7 @@ class SaveFirebase {
             correo: sessionStorage.getItem("correo")
         }
         //this.ref.push(data);
-        this.database.collection(this.referencia).add(data);
+        await this.database.collection(this.referencia).add(data);
     }
 
 }
