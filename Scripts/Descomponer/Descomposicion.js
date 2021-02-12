@@ -213,6 +213,7 @@ new p5(function (app) {
                         }
                                 if (secuencia.lastIndexOf != n) {
                                     errores++;
+                                    sessionStorage.setItem("ErroresDescomposicion", errores);
                                     console.log(errores);
                                 }
                 } else {
