@@ -18,9 +18,9 @@ window.onload = function () {
   btn.onclick = function () {
   }
 
-  async function save() {
+  function save() {
     if(complete == false){
-    await database.save();
+    database.save();
     var link = document.getElementById("form__link");
     link.setAttribute('href', "final.html");
     complete = true;
