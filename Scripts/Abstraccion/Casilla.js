@@ -19,64 +19,23 @@ class Casilla {
         
         switch (this.n) {
             case 1:
-                this.info = ["44", "62", "80", "08", "?", "44", "26", "62", "10"];
+                this.info = ["99", "87", "75", "63", "?", "39", "41", "52", "51"];
                 if (this.indice>5) {
                     this.literal = this.literales[this.indice-6];
                 }
                 break;
-            case 2:
-                this.info = ["🡕", "🡓", "🡔", "🡒", "🡗", "?", "🡖", "🡐", "🡑"];
-                if (this.i>5) {
-                    this.literal = this.literales[this.i-6];
+                case 2:
+                this.info = ["abc", "opq", "def", "rst", "ghi", "?", "lmn", "jkl", "xyz"];
+                if (this.indice>5) {
+                    this.literal = this.literales[this.indice-6];
                 }
                 break;
             case 3:
-                this.info = ["abc", "hij", "cde", "jkl", "?", "lmn", "efg", "nop", "klm"];
+                this.info = ["abc", "opq", "def", "rst", "ghi", "?", "lmn", "uvw", "xyz"];
                 if (this.indice>5) {
                     this.literal = this.literales[this.indice-6];
                 }
                 break;
-            case 4:
-                switch (this.indice) {
-                    case 0:
-                        this.info = [1, 1, 0, 0, 0, 1];
-                        break;
-
-                    case 1:
-                        this.info = [0, 0, 1, 0, 1, 1];
-                        break;
-
-                    case 2:
-                        this.info = [1, 1, 0, 1, 0, 0];
-                        break;
-
-                    case 3:
-                        this.info = [1, 0, 0, 1, 1, 0];
-                        break;
-
-                    case 4:
-                        this.info = ["?", "?", "?", "?", "?", "?", "?", "?"];
-                        break;
-
-                    case 5:
-                        this.info = [1, 0, 0, 0, 0, 1];
-                        break;
-
-                    case 6:
-                        this.info = [0, 0, 0, 1, 1, 1];
-                        break;
-
-                    case 7:
-                        this.info = [0, 1, 1, 1, 1, 0];
-                        break;
-
-
-                }
-                if (this.indice>4) {
-                    this.literal = this.literales[this.indice-5];
-                }
-                break;
-
         }
     }
 

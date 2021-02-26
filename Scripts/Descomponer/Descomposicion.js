@@ -21,6 +21,9 @@ new p5(function (app) {
         app.textAlign(app.CENTER, app.CENTER);
         figuras.push(new FiguraDescomponer(app, 2));
         figuras.push(new FiguraDescomponer(app, 2));
+        figuras.push(new FiguraDescomponer(app, 1));
+        figuras.push(new FiguraDescomponer(app, 3));
+        figuras.push(new FiguraDescomponer(app, 2));
         for (let i = 0; i < 6; i++) {
             if (i < 5) {
                 btn.push(new BotonesDescomponer(app, (app.width / 9) * (2 + i), app.height / 8, i + 1));
@@ -54,14 +57,14 @@ new p5(function (app) {
         for (let i = 0; i < btn.length; i++) {
             btn[i].show();
         }
-        if (figuras.length == 3 && completo == false) {
+        if (figuras.length == 1 && completo == false) {
             let n = 0;
             for (let i = 0; i < figuras.length; i++) {
-                if (figuras[i].getTFigura()==3) {
+                if (figuras[i].getTFigura()==1) {
                     n++;
                 }               
             }
-            if (n == 3) {
+            if (n == 1) {
                 completo = true;
                 sessionStorage.setItem("RespuestaDescomposicion", secuencia);
                 sessionStorage.setItem("ErroresDescomposicion", errores);
@@ -203,9 +206,8 @@ new p5(function (app) {
                             if (num == 3) {
                                 figuras.splice(indice1, 1);
                                 figuras.splice(indice2-1, 1);
-                                figuras.splice(indice3-1, 1);
+                                figuras.splice(indice3-2, 1);
                                 secuencia = secuencia + "" + n;
-                                return;
                             }
                             break;
 
@@ -221,7 +223,9 @@ new p5(function (app) {
                     figuras = [];
                     figuras.push(new FiguraDescomponer(app, 2));
                     figuras.push(new FiguraDescomponer(app, 2));
-
+                    figuras.push(new FiguraDescomponer(app, 1));
+                    figuras.push(new FiguraDescomponer(app, 3));
+                    figuras.push(new FiguraDescomponer(app, 2));
                 }
 
             }

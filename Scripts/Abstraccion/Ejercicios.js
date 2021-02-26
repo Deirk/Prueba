@@ -28,20 +28,11 @@ class Ejercicio {
                 this.ejercicio3.push(new Casilla(app, (app.width / 13) * (3 + i), (app.height / 10) * 6, 3, i,i));
             }
         }
-        this.ejercicio4 = [];
-        for (let i = 0; i < 8; i++) {
-            if (i < 5) {
-                this.ejercicio4.push(new Casilla(app, (app.width / 13) * (1.4 + i), (app.height / 10) * 8, 4, i,i));
-            } else {
-                this.ejercicio4.push(new Casilla(app, (app.width / 13) * (3.4 + i), (app.height / 10) * 8, 4, i,i));
-            }
-        }
 
         this.data = {
             Abstraccion1: 0,
             Abstraccion2: 0,
             Abstraccion3: 0,
-            Abstraccion4: 0
         }
         
 
@@ -59,9 +50,6 @@ class Ejercicio {
         for (let i = 0; i < this.ejercicio3.length; i++) {
             this.ejercicio3[i].show();
         }
-        for (let i = 0; i < this.ejercicio4.length; i++) {
-            this.ejercicio4[i].show();
-        }
         if (this.data.Abstraccion1 != 0 && this.data.Abstraccion2 != 0 && this.data.Abstraccion4 != 0 && this.data.Abstraccion4 != 0) {
             var timeBtn = document.getElementById("time__btn");
             var link;
@@ -76,7 +64,6 @@ class Ejercicio {
             sessionStorage.setItem("RespuestaEjercicio1Abstraccion", this.data.Abstraccion1);
             sessionStorage.setItem("RespuestaEjercicio2Abstraccion", this.data.Abstraccion2);
             sessionStorage.setItem("RespuestaEjercicio3Abstraccion", this.data.Abstraccion3);
-            sessionStorage.setItem("RespuestaEjercicio4Abstraccion", this.data.Abstraccion4);
             
         }
     }
@@ -111,17 +98,6 @@ class Ejercicio {
                     this.ejercicio3[h].setSelect(false);
                 }
                 this.ejercicio3[i].setSelect(true);
-                console.log(this.data);
-            }
-        }
-        for (let i = 0; i < this.ejercicio4.length; i++) {
-            if (this.ejercicio4[i].press(mx, my) == true) {
-                console.log(this.ejercicio4[i].press(mx, my));
-                this.data.Abstraccion4 = this.ejercicio4[i].getLiteral();
-                for (let h = 0; h < this.ejercicio4.length; h++) {
-                    this.ejercicio4[h].setSelect(false);
-                }
-                this.ejercicio4[i].setSelect(true);
                 console.log(this.data);
             }
         }

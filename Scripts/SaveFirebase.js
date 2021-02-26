@@ -36,7 +36,6 @@ class SaveFirebase {
             respuestaEjercicio1Abstraccion: sessionStorage.getItem("RespuestaEjercicio1Abstraccion"),
             respuestaEjercicio2Abstraccion: sessionStorage.getItem("RespuestaEjercicio2Abstraccion"),
             respuestaEjercicio3Abstraccion: sessionStorage.getItem("RespuestaEjercicio3Abstraccion"),
-            respuestaEjercicio4Abstraccion: sessionStorage.getItem("RespuestaEjercicio4Abstraccion"),
             tiempoAbstraccion: sessionStorage.getItem("tiempoAbstraccion"),
             respuestaGeneralizacion: sessionStorage.getItem("respuestaGeneralizacion"),
             tiempoGeneralizacion: sessionStorage.getItem("tiempoGeneralizacion"),
@@ -47,8 +46,8 @@ class SaveFirebase {
             ExperienciaEjercicio2: sessionStorage.getItem("ExperienciaEjecicio2"),
             ExperienciaEjercicio3: sessionStorage.getItem("ExperienciaEjecicio3"),
             ExperienciaEjercicio4: sessionStorage.getItem("ExperienciaEjecicio4"),
-            loQueLeGusto: sessionStorage.getItem("LoQueMasLeGusto"),
-            loQueNoLeGusto: sessionStorage.getItem("LoQueMenosLeGusto"),
+            loQueLeGusto: sessionStorage.getItem("mas"),
+            loQueNoLeGusto: sessionStorage.getItem("menos"),
             correo: sessionStorage.getItem("correo")
         }
         //this.ref.push(data);
