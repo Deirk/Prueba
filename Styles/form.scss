@@ -222,9 +222,9 @@ body{
     }
 
     &__btn{
+        width: 30%;
         margin: 1%;
-        width: 45%;
-        padding: 1em;
+        padding: 0.7em;
         color: $color-background;
         font-size: 0.9vw;
         letter-spacing: .2em;
@@ -303,22 +303,23 @@ body{
     }
 
     &__btn{
+        width: 45%;
         margin: 1%;
-        width: 80%;
         padding: 1em;
         color: $color-azulppal;
         font-size: 0.9vw;
         letter-spacing: .2em;
         text-transform: uppercase;
         font-weight: bold;
-        background: white;
+        background: $color-background;
         border: none;
         border-radius: 50px;
         cursor:pointer;
         overflow: hidden;
             
             &:hover {
-                background: $color-background;
+                background: $color-azulppal-hover;
+                color: $color-background;
                 transition: color 0.3s;
                 -o-transition: color 0.3s;
                 -ms-transition: color 0.3s;
