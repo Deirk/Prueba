@@ -76,7 +76,6 @@ class Ejercicio {
                     this.ejercicio1[h].setSelect(false);
                 }
                 this.ejercicio1[i].setSelect(true);
-                console.log(this.data);
             }
         }
         for (let i = 0; i < this.ejercicio2.length; i++) {
@@ -98,7 +97,6 @@ class Ejercicio {
                     this.ejercicio3[h].setSelect(false);
                 }
                 this.ejercicio3[i].setSelect(true);
-                console.log(this.data);
             }
         }
     }

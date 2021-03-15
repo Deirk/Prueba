@@ -26,8 +26,8 @@ class Casilla {
                 break;
                 case 2:
                 this.info = ["abc", "opq", "def", "rst", "ghi", "?", "lmn", "jkl", "xyz"];
-                if (this.indice>5) {
-                    this.literal = this.literales[this.indice-6];
+                if (this.i>5) {
+                    this.literal = this.literales[this.i-6];
                 }
                 break;
             case 3:
