@@ -46,11 +46,11 @@ window.onload = function () {
         seg = 0;
       }
       if (contando == true) {
-      if (tiempoS < 10) {
+     /* if (tiempoS < 10) {
         timeBtn.textContent = tiempoM + ":0" + tiempoS;
       } else {
         timeBtn.textContent = tiempoM + ":" + tiempoS;
-      }
+      }*/
       
 
       if (tiempoM < 0) {
